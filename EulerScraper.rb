@@ -42,8 +42,7 @@ class EulerScraper
     rnproblem = randOBJ.rand(527) + 1
     unless @past_problems.include?(rnproblem)
       @past_problems << rnproblem
-      @url << rnproblem.to_s
-      @url
+      @url + rnproblem.to_s
     else
       get_random_problem_url
     end
